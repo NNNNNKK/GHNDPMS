@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4CF87A05-50EB-4797-B1FC-4BCCD91D3804}</ProjectGuid>
+    <Keyword>QtVS_v302</Keyword>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <QtInstall>msvc2017</QtInstall>
+    <QtModules>axcontainer;concurrent;core;gui;network;remoteobjects;sql;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <QtInstall>msvc2017</QtInstall>
+    <QtModules>core;sql</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalIncludeDirectories>include;include\controller;.\GeneratedFiles\$(ConfigurationName);include\httpserver;include\datadeal;include\logging;include\templateengine;..\HikHttpUtil\include\HttpUtillib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ssleay32.lib;libnghttp2.lib;libeay32.lib;libcurl.lib;DbManage.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\HikHttpUtil\lib\VS2015\;..\debug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="commTools.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\controller\getdepartcontroller.cpp" />
+    <ClCompile Include="src\controller\HistoryDepartData.cpp" />
+    <ClCompile Include="src\controller\HistoryDepartDetailData.cpp" />
+    <ClCompile Include="src\controller\httpcallBackController.cpp" />
+    <ClCompile Include="src\controller\RealtimeDepartData.cpp" />
+    <ClCompile Include="src\controller\RealTimeDepartDetailData.cpp" />
+    <ClCompile Include="src\controller\RealtimePrsNumberController.cpp" />
+    <ClCompile Include="src\controller\requestmapper.cpp" />
+    <ClCompile Include="src\controller\setcontroller.cpp" />
+    <ClCompile Include="src\datadeal\DataStore.cpp" />
+    <ClCompile Include="src\datadeal\hikdatarequest.cpp" />
+    <ClCompile Include="src\datadeal\systemconfig.cpp" />
+    <ClCompile Include="src\datadeal\timercontracller.cpp" />
+    <ClCompile Include="src\httpserver\httpconnectionhandler.cpp" />
+    <ClCompile Include="src\httpserver\httpconnectionhandlerpool.cpp" />
+    <ClCompile Include="src\httpserver\httpcookie.cpp" />
+    <ClCompile Include="src\httpserver\httpglobal.cpp" />
+    <ClCompile Include="src\httpserver\httplistener.cpp" />
+    <ClCompile Include="src\httpserver\httprequest.cpp" />
+    <ClCompile Include="src\httpserver\httprequesthandler.cpp" />
+    <ClCompile Include="src\httpserver\httpresponse.cpp" />
+    <ClCompile Include="src\httpserver\httpsession.cpp" />
+    <ClCompile Include="src\httpserver\httpsessionstore.cpp" />
+    <ClCompile Include="src\httpserver\staticfilecontroller.cpp" />
+    <ClCompile Include="src\logging\dualfilelogger.cpp" />
+    <ClCompile Include="src\logging\filelogger.cpp" />
+    <ClCompile Include="src\logging\logger.cpp" />
+    <ClCompile Include="src\logging\logmessage.cpp" />
+    <ClCompile Include="src\templateengine\template.cpp" />
+    <ClCompile Include="src\templateengine\templatecache.cpp" />
+    <ClCompile Include="src\templateengine\templateloader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="include\controller\setcontroller.h" />
+    <QtMoc Include="include\controller\requestmapper.h" />
+    <QtMoc Include="include\controller\RealtimePrsNumberController.h" />
+    <QtMoc Include="include\controller\RealTimeDepartDetailData.h" />
+    <QtMoc Include="include\controller\RealtimeDepartData.h" />
+    <QtMoc Include="include\controller\httpcallBackController.h" />
+    <QtMoc Include="include\controller\HistoryDepartDetailData.h" />
+    <QtMoc Include="include\controller\HistoryDepartData.h" />
+    <QtMoc Include="include\controller\getdepartcontroller.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="include\httpserver\httpconnectionhandler.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="include\httpserver\httpconnectionhandlerpool.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="commTools.h" />
+    <ClInclude Include="include\controller\GloableLocker.h" />
+    <ClInclude Include="include\datadeal\DataStore.h" />
+    <ClInclude Include="include\datadeal\systemconfig.h" />
+    <ClInclude Include="include\DbManageContexInterface.h" />
+    <ClInclude Include="include\logging\logglobal.h" />
+    <ClInclude Include="include\logging\logmessage.h" />
+    <ClInclude Include="include\StructureData.h" />
+    <ClInclude Include="include\templateengine\template.h" />
+    <ClInclude Include="include\templateengine\templateglobal.h" />
+    <QtMoc Include="include\templateengine\templateloader.h" />
+    <QtMoc Include="include\templateengine\templatecache.h" />
+    <QtMoc Include="include\logging\logger.h" />
+    <QtMoc Include="include\logging\filelogger.h" />
+    <QtMoc Include="include\logging\dualfilelogger.h" />
+    <QtMoc Include="include\datadeal\timercontracller.h" />
+    <QtMoc Include="include\datadeal\hikdatarequest.h" />
+    <ClInclude Include="include\httpserver\httpcookie.h" />
+    <ClInclude Include="include\httpserver\httpglobal.h" />
+    <ClInclude Include="include\httpserver\httprequest.h" />
+    <ClInclude Include="include\httpserver\httpresponse.h" />
+    <ClInclude Include="include\httpserver\httpsession.h" />
+    <QtMoc Include="include\httpserver\staticfilecontroller.h" />
+    <QtMoc Include="include\httpserver\httpsessionstore.h" />
+    <QtMoc Include="include\httpserver\httprequesthandler.h" />
+    <QtMoc Include="include\httpserver\httplistener.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HikHttpUtil\src\VS2015\HttpUtillib.vcxproj">
+      <Project>{a38ac541-ba75-4c8d-98df-612f642f7910}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

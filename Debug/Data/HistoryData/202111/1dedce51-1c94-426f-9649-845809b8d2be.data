@@ -1,0 +1,125 @@
+{
+    "1dedce51-1c94-426f-9649-845809b8d2be": {
+        "actualWkT": "0.0",
+        "attendanceRatio": "0.00%",
+        "contractPsN": 9,
+        "contractWrH": 360,
+        "count": 11,
+        "data": [
+            {
+                "attendenceHours": 0,
+                "cardNumber": "16260037",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "1dedce51-1c94-426f-9649-845809b8d2be",
+                "personId": "f115f14ac25e4324a65e9adf876c84ab",
+                "personName": "李媛媛"
+            },
+            {
+                "attendenceHours": 0,
+                "cardNumber": "16260293",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "1dedce51-1c94-426f-9649-845809b8d2be",
+                "personId": "b567bd5c651e4528a6917d231e3a39fa",
+                "personName": "段海燕"
+            },
+            {
+                "attendenceHours": 0,
+                "cardNumber": "16260318",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "1dedce51-1c94-426f-9649-845809b8d2be",
+                "personId": "95bf6522afbd4c5ab06c82a9812a162d",
+                "personName": "王咏泽"
+            },
+            {
+                "attendenceHours": 0,
+                "cardNumber": "16260436",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "1dedce51-1c94-426f-9649-845809b8d2be",
+                "personId": "939c4a1222184bdf8118f041723ce71c",
+                "personName": "孙志越"
+            },
+            {
+                "attendenceHours": 0,
+                "cardNumber": "16260414",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "1dedce51-1c94-426f-9649-845809b8d2be",
+                "personId": "8b649a71ea874e788b159c2877dcea59",
+                "personName": "孙梦佳"
+            },
+            {
+                "attendenceHours": 0,
+                "cardNumber": "16260379",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "1dedce51-1c94-426f-9649-845809b8d2be",
+                "personId": "656809f8ccf64eaea53e3a5fbbca5f9d",
+                "personName": "刘璇"
+            },
+            {
+                "attendenceHours": 0,
+                "cardNumber": "16260426",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "1dedce51-1c94-426f-9649-845809b8d2be",
+                "personId": "5efbd934a9394f74b975b691193dbae4",
+                "personName": "张厦"
+            },
+            {
+                "attendenceHours": 0,
+                "cardNumber": "16260038",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "1dedce51-1c94-426f-9649-845809b8d2be",
+                "personId": "4b2882f9209a4fbfac30848690619d0c",
+                "personName": "方超"
+            },
+            {
+                "attendenceHours": 0,
+                "cardNumber": "16260039",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "1dedce51-1c94-426f-9649-845809b8d2be",
+                "personId": "48b0153e10e8453da69f7a7302bfc269",
+                "personName": "张剑君"
+            },
+            {
+                "attendenceHours": 0,
+                "cardNumber": "16260421",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "1dedce51-1c94-426f-9649-845809b8d2be",
+                "personId": "207cf657c95e45ba80b44cc75b41ddc7",
+                "personName": "段长磊"
+            },
+            {
+                "attendenceHours": 0,
+                "cardNumber": "16260191",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "1dedce51-1c94-426f-9649-845809b8d2be",
+                "personId": "0bbceca8cc07474e9206c7934df55b22",
+                "personName": "马晓玲"
+            }
+        ],
+        "departId": "1dedce51-1c94-426f-9649-845809b8d2be",
+        "orgName": "财务产权部",
+        "turnoverRate": "0.00%",
+        "updatetime": "2021-11-08T19:18:53"
+    }
+}

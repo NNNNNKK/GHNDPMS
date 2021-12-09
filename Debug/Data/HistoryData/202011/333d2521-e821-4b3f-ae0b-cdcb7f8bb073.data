@@ -1,0 +1,885 @@
+{
+    "333d2521-e821-4b3f-ae0b-cdcb7f8bb073": {
+        "actualWkT": "88.6",
+        "attendanceRatio": "12.31%",
+        "contractPsN": 9,
+        "contractWrH": 720,
+        "count": 28,
+        "data": [
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16260050",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "fc5e1ee1e4144158b703bee0805df0e1",
+                "personName": "李乾"
+            },
+            {
+                "attendenceHours": "0.30",
+                "cardNumber": "16090176",
+                "detail": [
+                    {
+                        "doorName": "二道门1通道_门1",
+                        "eventTime": "2020-11-12T14:19:28+08:00",
+                        "personName": "田敬元"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-12T14:32:38+08:00",
+                        "personName": "田敬元"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-12T17:56:54+08:00",
+                        "personName": "田敬元"
+                    },
+                    {
+                        "doorName": "生产区南门3通道_门2",
+                        "eventTime": "2020-11-12T18:01:48+08:00",
+                        "personName": "田敬元"
+                    }
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "e1aed69a15214953ac413533b9ab1bb8",
+                "personName": "田敬元"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16260198",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "c8f2974e308d415383cbf16084ebcb17",
+                "personName": "邱启军"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16070174",
+                "detail": [
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-04T20:34:00+08:00",
+                        "personName": "高海贵"
+                    }
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "c28a1cc0aa9a49c4a75b6697959d8c37",
+                "personName": "高海贵"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16032685",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "a8b1b8e28e0c4ea9b3952fd986540a81",
+                "personName": "李飞"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16260004",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "a233b20fa9cc412c9c89a555f8a52699",
+                "personName": "王志礼"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16260018",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "97bdefc7e0e24e7cb32c2b6c69a6a9c9",
+                "personName": "马新立"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16260416",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "9740a0a320c34d228449915fcfd94b04",
+                "personName": "张宇强"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16260013",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "8e324a86c81a49adb45e0b64e7bd8b1f",
+                "personName": "杨光任"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16260015",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "87f1b2af3017435384f5bb3733960b50",
+                "personName": "邱亚军"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16061562",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "80b549ab1c37453ca783e292e7376dae",
+                "personName": "孙志华"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16260020",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "7ea8230df67741bfa7028382752833c5",
+                "personName": "朱鸿宁"
+            },
+            {
+                "attendenceHours": "6.47",
+                "cardNumber": "16260204",
+                "detail": [
+                    {
+                        "doorName": "二道门3通道_门1",
+                        "eventTime": "2020-11-06T09:24:06+08:00",
+                        "personName": "唐战超"
+                    },
+                    {
+                        "doorName": "二道门3通道_门2",
+                        "eventTime": "2020-11-06T11:46:52+08:00",
+                        "personName": "唐战超"
+                    },
+                    {
+                        "doorName": "二道门3通道_门1",
+                        "eventTime": "2020-11-11T09:52:08+08:00",
+                        "personName": "唐战超"
+                    },
+                    {
+                        "doorName": "二道门3通道_门2",
+                        "eventTime": "2020-11-11T11:35:00+08:00",
+                        "personName": "唐战超"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-12T15:01:56+08:00",
+                        "personName": "唐战超"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-12T17:24:27+08:00",
+                        "personName": "唐战超"
+                    }
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "7299bd220dd04c34a62aeb3e64f2f653",
+                "personName": "唐战超"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16260009",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "6d32424cdf584b8ea4162187fb8627bb",
+                "personName": "齐俊甫"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16143542",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "614b3de4657b424599fba0ee3e8fa1a4",
+                "personName": "任富霞"
+            },
+            {
+                "attendenceHours": "1.66",
+                "cardNumber": "16260034",
+                "detail": [
+                    {
+                        "doorName": "二道门3通道_门2",
+                        "eventTime": "2020-11-03T09:35:31+08:00",
+                        "personName": "张康利"
+                    },
+                    {
+                        "doorName": "二道门3通道_门1",
+                        "eventTime": "2020-11-11T09:54:22+08:00",
+                        "personName": "张康利"
+                    },
+                    {
+                        "doorName": "二道门2通道_门2",
+                        "eventTime": "2020-11-11T11:33:52+08:00",
+                        "personName": "张康利"
+                    }
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "5d1d97a8b0c94ad1b0708a871e3d9b68",
+                "personName": "张康利"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16260017",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "5871d063f25e40348c9f81b0e7a37bc6",
+                "personName": "刘红洲"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16050094",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "50c317f8790c485d99ba97860fda4834",
+                "personName": "赵淑杰"
+            },
+            {
+                "attendenceHours": "51.45",
+                "cardNumber": "16126012",
+                "detail": [
+                    {
+                        "doorName": "二道门1通道_门1",
+                        "eventTime": "2020-11-01T08:19:18+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门2通道_门1",
+                        "eventTime": "2020-11-01T08:21:40+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-01T10:38:33+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-01T16:03:40+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "生产区南门2通道_门2",
+                        "eventTime": "2020-11-01T16:10:10+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "生产区南门3通道_门1",
+                        "eventTime": "2020-11-01T16:11:45+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门3通道_门2",
+                        "eventTime": "2020-11-01T16:36:56+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-02T15:12:31+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门1通道_门2",
+                        "eventTime": "2020-11-02T16:02:28+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-03T07:51:50+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-03T10:00:24+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-03T15:21:28+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-03T16:25:24+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门3通道_门1",
+                        "eventTime": "2020-11-04T07:49:34+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-04T09:01:54+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-04T10:24:44+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-04T10:49:04+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-04T17:09:50+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门2通道_门2",
+                        "eventTime": "2020-11-04T17:35:03+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门1通道_门1",
+                        "eventTime": "2020-11-05T07:51:41+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-05T10:26:49+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-05T15:36:51+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门2通道_门2",
+                        "eventTime": "2020-11-05T17:45:30+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门2通道_门2",
+                        "eventTime": "2020-11-05T17:45:38+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门2通道_门1",
+                        "eventTime": "2020-11-06T07:45:12+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门1通道_门2",
+                        "eventTime": "2020-11-06T10:38:23+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门3通道_门1",
+                        "eventTime": "2020-11-06T16:14:42+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-06T16:37:29+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-06T16:37:33+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-07T08:18:29+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-07T11:05:11+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-07T16:15:04+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-07T17:12:09+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门1通道_门1",
+                        "eventTime": "2020-11-08T07:41:01+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-08T10:10:20+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-08T16:23:39+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门3通道_门2",
+                        "eventTime": "2020-11-08T17:47:34+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门2通道_门2",
+                        "eventTime": "2020-11-09T05:18:26+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门2通道_门1",
+                        "eventTime": "2020-11-09T11:26:29+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门3通道_门2",
+                        "eventTime": "2020-11-09T11:35:48+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门3通道_门1",
+                        "eventTime": "2020-11-09T19:38:30+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-09T19:50:24+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门3通道_门1",
+                        "eventTime": "2020-11-10T07:53:18+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-10T11:14:05+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门2通道_门1",
+                        "eventTime": "2020-11-10T15:08:34+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-10T16:00:11+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-11T08:06:35+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-11T11:34:34+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-11T14:52:25+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-11T17:11:14+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-12T08:01:36+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-12T08:01:40+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门3通道_门1",
+                        "eventTime": "2020-11-12T14:39:12+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门3通道_门2",
+                        "eventTime": "2020-11-12T15:34:57+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-12T15:56:08+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门3通道_门2",
+                        "eventTime": "2020-11-12T17:34:42+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-13T08:06:51+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-13T11:26:49+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-13T15:09:38+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-13T16:27:06+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-14T08:16:16+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-14T09:50:13+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-14T10:34:25+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-14T10:34:28+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-14T10:53:25+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门3通道_门1",
+                        "eventTime": "2020-11-14T16:07:20+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-14T16:59:35+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-14T16:59:39+08:00",
+                        "personName": "黄河"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-15T08:01:36+08:00",
+                        "personName": "黄河"
+                    }
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "4f221fdc33404ea5bda52f55f8c40d8f",
+                "personName": "黄河"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16260090",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "42c2ba2f17c94308a776be21905bb1f5",
+                "personName": "张园"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16260091",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "33926ee8197a4f1b91fbf078f57d73cb",
+                "personName": "白建宁"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16260422",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "2a1223e574ee43c5be484edbbbdbf4b2",
+                "personName": "周帅"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16080060",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "26145c3766ea4393a8fd05ffdce4914c",
+                "personName": "刘新民"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16260006",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "1cd53eef6f52479c8bf376b9d3fabbe4",
+                "personName": "刘长民"
+            },
+            {
+                "attendenceHours": "3.20",
+                "cardNumber": "16260005",
+                "detail": [
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-02T19:28:22+08:00",
+                        "personName": "王福宁"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-02T20:03:00+08:00",
+                        "personName": "王福宁"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-04T08:07:22+08:00",
+                        "personName": "王福宁"
+                    },
+                    {
+                        "doorName": "二道门3通道_门2",
+                        "eventTime": "2020-11-04T08:55:01+08:00",
+                        "personName": "王福宁"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-10T19:35:43+08:00",
+                        "personName": "王福宁"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-10T20:33:06+08:00",
+                        "personName": "王福宁"
+                    },
+                    {
+                        "doorName": "二道门2通道_门1",
+                        "eventTime": "2020-11-11T08:04:39+08:00",
+                        "personName": "王福宁"
+                    },
+                    {
+                        "doorName": "二道门2通道_门2",
+                        "eventTime": "2020-11-11T08:56:46+08:00",
+                        "personName": "王福宁"
+                    }
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "17f116870271463e836bf5ec24189da6",
+                "personName": "王福宁"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "16260032",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "169c8de97ddc442f84186b9b8ca1f8d0",
+                "personName": "周锦敏"
+            },
+            {
+                "attendenceHours": "25.56",
+                "cardNumber": "050371",
+                "detail": [
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-03T16:29:31+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门2通道_门2",
+                        "eventTime": "2020-11-03T17:24:24+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门2通道_门1",
+                        "eventTime": "2020-11-04T07:51:43+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门3通道_门2",
+                        "eventTime": "2020-11-04T09:01:53+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-05T08:21:06+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门3通道_门2",
+                        "eventTime": "2020-11-05T10:26:46+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-06T08:19:13+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门3通道_门2",
+                        "eventTime": "2020-11-06T09:57:32+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-06T16:21:28+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门3通道_门2",
+                        "eventTime": "2020-11-06T17:11:38+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-08T08:15:25+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门3通道_门2",
+                        "eventTime": "2020-11-08T11:27:05+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-10T08:21:12+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-10T10:52:52+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-10T20:03:46+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门2通道_门2",
+                        "eventTime": "2020-11-10T22:31:10+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门1通道_门1",
+                        "eventTime": "2020-11-11T20:10:57+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门2通道_门1",
+                        "eventTime": "2020-11-11T20:11:00+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门3通道_门2",
+                        "eventTime": "2020-11-11T20:16:05+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-12T08:15:01+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门1通道_门2",
+                        "eventTime": "2020-11-12T11:34:31+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-13T08:23:11+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-13T11:32:46+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-14T08:05:57+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门2通道_门2",
+                        "eventTime": "2020-11-14T10:52:46+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门4通道_门1",
+                        "eventTime": "2020-11-14T15:52:06+08:00",
+                        "personName": "于洪泽"
+                    },
+                    {
+                        "doorName": "二道门4通道_门2",
+                        "eventTime": "2020-11-14T17:14:47+08:00",
+                        "personName": "于洪泽"
+                    }
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "a5862f53f4d04802b24072c1333f1fd6",
+                "personName": "于洪泽"
+            },
+            {
+                "attendenceHours": "0.00",
+                "cardNumber": "346878",
+                "detail": [
+                ],
+                "orgName": null,
+                "orgindex": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+                "personId": "19a77729fe6041b991d9a97f0d8b9505",
+                "personName": "测试"
+            }
+        ],
+        "departId": "333d2521-e821-4b3f-ae0b-cdcb7f8bb073",
+        "orgName": "办公室",
+        "turnoverRate": "-200.00%",
+        "updatetime": "2020-11-15T08:21:03"
+    }
+}

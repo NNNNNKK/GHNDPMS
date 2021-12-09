@@ -1,0 +1,15 @@
+{
+    "null": {
+        "actualWkT": "0.0",
+        "attendanceRatio": "0.00%",
+        "contractPsN": 2049803424,
+        "contractWrH": -1181050368,
+        "count": 0,
+        "data": [
+        ],
+        "departId": "null",
+        "orgName": 0,
+        "turnoverRate": "100.00%",
+        "updatetime": "2021-11-25T10:40:40"
+    }
+}

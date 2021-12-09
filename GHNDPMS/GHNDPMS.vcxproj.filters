@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Header Files\controller">
+      <UniqueIdentifier>{0f8ae9c7-6cef-4010-92eb-d359ce2c9745}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\controller">
+      <UniqueIdentifier>{02930e6b-ca72-43f4-86e4-bf3d010faa76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\httpserver">
+      <UniqueIdentifier>{bf2ed105-3b4b-44a7-b671-4aee2473aa22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\httpserver">
+      <UniqueIdentifier>{037da8f2-3774-4169-815c-72a4273b79d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\datadeal">
+      <UniqueIdentifier>{7ed3c472-0420-4452-9a24-4c580c0250ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\datadeal">
+      <UniqueIdentifier>{ecf5270d-1f7c-46d6-8517-bb46f976da6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\logging">
+      <UniqueIdentifier>{410b2127-2ce6-457e-aa62-e83756746256}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logging">
+      <UniqueIdentifier>{1e2dd0df-71c1-455a-bc07-bb758871786e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\templateengine">
+      <UniqueIdentifier>{913ebd8f-fab9-47b5-bd12-4db60ff87d50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\templateengine">
+      <UniqueIdentifier>{07badc72-e582-4095-b395-a0fe2205f636}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\controller\getdepartcontroller.cpp">
+      <Filter>Source Files\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="src\controller\HistoryDepartData.cpp">
+      <Filter>Source Files\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="src\controller\HistoryDepartDetailData.cpp">
+      <Filter>Source Files\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="src\controller\httpcallBackController.cpp">
+      <Filter>Source Files\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="src\controller\RealtimeDepartData.cpp">
+      <Filter>Source Files\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="src\controller\RealTimeDepartDetailData.cpp">
+      <Filter>Source Files\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="src\controller\RealtimePrsNumberController.cpp">
+      <Filter>Source Files\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="src\controller\requestmapper.cpp">
+      <Filter>Source Files\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="src\controller\setcontroller.cpp">
+      <Filter>Source Files\controller</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpserver\httpconnectionhandler.cpp">
+      <Filter>Source Files\httpserver</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpserver\httpconnectionhandlerpool.cpp">
+      <Filter>Source Files\httpserver</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpserver\httpcookie.cpp">
+      <Filter>Source Files\httpserver</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpserver\httpglobal.cpp">
+      <Filter>Source Files\httpserver</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpserver\httplistener.cpp">
+      <Filter>Source Files\httpserver</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpserver\httprequest.cpp">
+      <Filter>Source Files\httpserver</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpserver\httprequesthandler.cpp">
+      <Filter>Source Files\httpserver</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpserver\httpresponse.cpp">
+      <Filter>Source Files\httpserver</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpserver\httpsession.cpp">
+      <Filter>Source Files\httpserver</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpserver\httpsessionstore.cpp">
+      <Filter>Source Files\httpserver</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpserver\staticfilecontroller.cpp">
+      <Filter>Source Files\httpserver</Filter>
+    </ClCompile>
+    <ClCompile Include="src\datadeal\hikdatarequest.cpp">
+      <Filter>Source Files\datadeal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\datadeal\systemconfig.cpp">
+      <Filter>Source Files\datadeal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\datadeal\timercontracller.cpp">
+      <Filter>Source Files\datadeal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\datadeal\DataStore.cpp">
+      <Filter>Source Files\datadeal</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logging\dualfilelogger.cpp">
+      <Filter>Source Files\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logging\filelogger.cpp">
+      <Filter>Source Files\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logging\logger.cpp">
+      <Filter>Source Files\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logging\logmessage.cpp">
+      <Filter>Source Files\logging</Filter>
+    </ClCompile>
+    <ClCompile Include="src\templateengine\template.cpp">
+      <Filter>Source Files\templateengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\templateengine\templatecache.cpp">
+      <Filter>Source Files\templateengine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\templateengine\templateloader.cpp">
+      <Filter>Source Files\templateengine</Filter>
+    </ClCompile>
+    <ClCompile Include="commTools.cpp">
+      <Filter>Source Files\datadeal</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="include\controller\getdepartcontroller.h">
+      <Filter>Header Files\controller</Filter>
+    </QtMoc>
+    <QtMoc Include="include\controller\HistoryDepartData.h">
+      <Filter>Header Files\controller</Filter>
+    </QtMoc>
+    <QtMoc Include="include\controller\HistoryDepartDetailData.h">
+      <Filter>Header Files\controller</Filter>
+    </QtMoc>
+    <QtMoc Include="include\controller\httpcallBackController.h">
+      <Filter>Header Files\controller</Filter>
+    </QtMoc>
+    <QtMoc Include="include\controller\RealtimeDepartData.h">
+      <Filter>Header Files\controller</Filter>
+    </QtMoc>
+    <QtMoc Include="include\controller\RealTimeDepartDetailData.h">
+      <Filter>Header Files\controller</Filter>
+    </QtMoc>
+    <QtMoc Include="include\controller\RealtimePrsNumberController.h">
+      <Filter>Header Files\controller</Filter>
+    </QtMoc>
+    <QtMoc Include="include\controller\requestmapper.h">
+      <Filter>Header Files\controller</Filter>
+    </QtMoc>
+    <QtMoc Include="include\controller\setcontroller.h">
+      <Filter>Header Files\controller</Filter>
+    </QtMoc>
+    <QtMoc Include="include\httpserver\httpconnectionhandler.h">
+      <Filter>Header Files\httpserver</Filter>
+    </QtMoc>
+    <QtMoc Include="include\httpserver\httpconnectionhandlerpool.h">
+      <Filter>Header Files\httpserver</Filter>
+    </QtMoc>
+    <QtMoc Include="include\httpserver\httplistener.h">
+      <Filter>Header Files\httpserver</Filter>
+    </QtMoc>
+    <QtMoc Include="include\httpserver\httprequesthandler.h">
+      <Filter>Header Files\httpserver</Filter>
+    </QtMoc>
+    <QtMoc Include="include\httpserver\httpsessionstore.h">
+      <Filter>Header Files\httpserver</Filter>
+    </QtMoc>
+    <QtMoc Include="include\httpserver\staticfilecontroller.h">
+      <Filter>Header Files\httpserver</Filter>
+    </QtMoc>
+    <QtMoc Include="include\datadeal\hikdatarequest.h">
+      <Filter>Header Files\datadeal</Filter>
+    </QtMoc>
+    <QtMoc Include="include\datadeal\timercontracller.h">
+      <Filter>Header Files\datadeal</Filter>
+    </QtMoc>
+    <QtMoc Include="include\logging\dualfilelogger.h">
+      <Filter>Header Files\logging</Filter>
+    </QtMoc>
+    <QtMoc Include="include\logging\filelogger.h">
+      <Filter>Header Files\logging</Filter>
+    </QtMoc>
+    <QtMoc Include="include\logging\logger.h">
+      <Filter>Header Files\logging</Filter>
+    </QtMoc>
+    <QtMoc Include="include\templateengine\templatecache.h">
+      <Filter>Header Files\templateengine</Filter>
+    </QtMoc>
+    <QtMoc Include="include\templateengine\templateloader.h">
+      <Filter>Header Files\templateengine</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\httpserver\httpcookie.h">
+      <Filter>Header Files\httpserver</Filter>
+    </ClInclude>
+    <ClInclude Include="include\httpserver\httpglobal.h">
+      <Filter>Header Files\httpserver</Filter>
+    </ClInclude>
+    <ClInclude Include="include\httpserver\httprequest.h">
+      <Filter>Header Files\httpserver</Filter>
+    </ClInclude>
+    <ClInclude Include="include\httpserver\httpresponse.h">
+      <Filter>Header Files\httpserver</Filter>
+    </ClInclude>
+    <ClInclude Include="include\httpserver\httpsession.h">
+      <Filter>Header Files\httpserver</Filter>
+    </ClInclude>
+    <ClInclude Include="include\datadeal\systemconfig.h">
+      <Filter>Header Files\datadeal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\datadeal\DataStore.h">
+      <Filter>Header Files\datadeal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\controller\GloableLocker.h">
+      <Filter>Header Files\controller</Filter>
+    </ClInclude>
+    <ClInclude Include="include\logging\logglobal.h">
+      <Filter>Header Files\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="include\logging\logmessage.h">
+      <Filter>Header Files\logging</Filter>
+    </ClInclude>
+    <ClInclude Include="include\templateengine\template.h">
+      <Filter>Header Files\templateengine</Filter>
+    </ClInclude>
+    <ClInclude Include="include\templateengine\templateglobal.h">
+      <Filter>Header Files\templateengine</Filter>
+    </ClInclude>
+    <ClInclude Include="commTools.h">
+      <Filter>Header Files\datadeal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DbManageContexInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\StructureData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

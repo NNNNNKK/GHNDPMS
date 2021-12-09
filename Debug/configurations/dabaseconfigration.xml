@@ -1,0 +1,14 @@
+<?xml version ="1.0" encoding="utf-8">
+<configration>
+    <property>
+        <hostName>localhost</hostName>
+        <dataBaseName>GHNDDB</dataBaseName>
+        <userName>ma</userName>
+        <password></password>
+        <databaseType>QODBC</databaseType>
+        <maxWaitTime>1000</maxWaitTime>
+        <waitInterval>200</waitInterval>
+        <maxConnectionCount>1000</maxConnectionCount>
+        
+    </property>
+</configration>

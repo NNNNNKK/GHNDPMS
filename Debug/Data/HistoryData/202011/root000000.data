@@ -1,0 +1,15 @@
+{
+    "root000000": {
+        "actualWkT": "0.0",
+        "attendanceRatio": "0.00%",
+        "contractPsN": 9,
+        "contractWrH": 720,
+        "count": 0,
+        "data": [
+        ],
+        "departId": "root000000",
+        "orgName": "国华宁东电厂",
+        "turnoverRate": "100.00%",
+        "updatetime": "2020-11-16T19:55:09"
+    }
+}

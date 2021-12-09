@@ -1,0 +1,151 @@
+{
+    "DepartHistotyInformation": [
+        {
+            "actualWkT": 0,
+            "attendanceRatio": "0.00%",
+            "contractPsN": 50,
+            "contractWrH": 5200,
+            "count": 4,
+            "data": [
+                {
+                    "attendenceHours": 0,
+                    "cardNumber": "073433",
+                    "detail": [
+                        {
+                            "doorName": "二道门4通道_门2",
+                            "eventTime": "2020-03-08 16:34:30",
+                            "personName": "杨学林"
+                        },
+                        {
+                            "doorName": "二道门4通道_门2",
+                            "eventTime": "2020-03-08 16:34:30",
+                            "personName": "杨学林"
+                        },
+                        {
+                            "doorName": "二道门4通道_门2",
+                            "eventTime": "2020-03-08 16:34:30",
+                            "personName": "杨学林"
+                        },
+                        {
+                            "doorName": "二道门4通道_门2",
+                            "eventTime": "2020-03-08 16:34:30",
+                            "personName": "杨学林"
+                        },
+                        {
+                            "doorName": "二道门4通道_门2",
+                            "eventTime": "2020-03-08 16:34:30",
+                            "personName": "杨学林"
+                        }
+                    ],
+                    "orgindex": "root000000",
+                    "personId": "8c4ca91771b845b496abf710029f00a6",
+                    "personName": "杨学林"
+                },
+                {
+                    "attendenceHours": 0,
+                    "cardNumber": "142212",
+                    "detail": [
+                        {
+                            "doorName": "二道门4通道_门2",
+                            "eventTime": "2020-03-08T16:34:30+08:00",
+                            "personName": "李瑞"
+                        },
+                        {
+                            "doorName": "二道门4通道_门2",
+                            "eventTime": "2020-03-08T16:34:30+08:00",
+                            "personName": "李瑞"
+                        },
+                        {
+                            "doorName": "二道门4通道_门2",
+                            "eventTime": "2020-03-08T16:34:30+08:00",
+                            "personName": "李瑞"
+                        },
+                        {
+                            "doorName": "二道门4通道_门2",
+                            "eventTime": "2020-03-08T16:34:30+08:00",
+                            "personName": "李瑞"
+                        },
+                        {
+                            "doorName": "二道门4通道_门2",
+                            "eventTime": "2020-03-08T16:34:30+08:00",
+                            "personName": "李瑞"
+                        }
+                    ],
+                    "orgindex": "root000000",
+                    "personId": "1fdbd4155d364c6c8457a52ece69018a",
+                    "personName": "李瑞"
+                },
+                {
+                    "attendenceHours": 0,
+                    "cardNumber": "200454",
+                    "detail": [
+                        {
+                            "doorName": "二道门4通道_门2",
+                            "eventTime": "2020-03-08T16:34:30+08:00",
+                            "personName": "魏洪友"
+                        },
+                        {
+                            "doorName": "二道门4通道_门2",
+                            "eventTime": "2020-03-08T16:34:30+08:00",
+                            "personName": "魏洪友"
+                        },
+                        {
+                            "doorName": "二道门4通道_门2",
+                            "eventTime": "2020-03-08T16:34:30+08:00",
+                            "personName": "魏洪友"
+                        }
+                    ],
+                    "orgindex": "root000000",
+                    "personId": "20708167f4e1468abf5f1cc4a3454951",
+                    "personName": "魏洪友"
+                },
+                {
+                    "attendenceHours": 0,
+                    "cardNumber": "230012",
+                    "detail": [
+                        {
+                            "doorName": "二道门4通道_门2",
+                            "eventTime": "2020-03-08T16:34:30+08:00",
+                            "personName": "吴晨"
+                        },
+                        {
+                            "doorName": "二道门4通道_门2",
+                            "eventTime": "2020-03-08T16:34:30+08:00",
+                            "personName": "吴晨"
+                        },
+                        {
+                            "doorName": "二道门4通道_门2",
+                            "eventTime": "2020-03-08T16:34:30+08:00",
+                            "personName": "吴晨"
+                        },
+                        {
+                            "doorName": "二道门4通道_门2",
+                            "eventTime": "2020-03-08T16:34:30+08:00",
+                            "personName": "吴晨"
+                        }
+                    ],
+                    "orgindex": "root000000",
+                    "personId": "7631f2b628e643298e38e468efdb26eb",
+                    "personName": "吴晨"
+                }
+            ],
+            "departId": "root000000",
+            "orgName": "国华宁东电厂",
+            "turnoverRate": "100.00%",
+            "updatetime": "2020-03-19T13:18:27"
+        },
+        {
+            "actualWkT": 0,
+            "attendanceRatio": "0.00%",
+            "contractPsN": -1,
+            "contractWrH": -160,
+            "count": 0,
+            "data": [
+            ],
+            "departId": 0,
+            "orgName": 0,
+            "turnoverRate": "100.00%",
+            "updatetime": "2020-03-22T21:06:27"
+        }
+    ]
+}

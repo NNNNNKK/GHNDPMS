@@ -1,0 +1,106 @@
+﻿  Reading Qt configuration (D:\Qt\Qt5.12.2\5.12.2\msvc2017\\bin\qmake.exe)
+  moc include\controller\setcontroller.h
+  moc include\controller\requestmapper.h
+  moc include\controller\RealtimePrsNumberController.h
+  moc include\controller\RealTimeDepartDetailData.h
+  moc include\controller\RealtimeDepartData.h
+  moc include\controller\httpcallBackController.h
+  moc include\controller\HistoryDepartDetailData.h
+  moc include\controller\HistoryDepartData.h
+  moc include\controller\getdepartcontroller.h
+  moc include\httpserver\httpconnectionhandler.h
+  moc include\httpserver\httpconnectionhandlerpool.h
+  moc include\templateengine\templateloader.h
+  moc include\templateengine\templatecache.h
+  moc include\logging\logger.h
+  moc include\logging\filelogger.h
+  moc include\logging\dualfilelogger.h
+  moc include\datadeal\timercontracller.h
+  moc include\datadeal\hikdatarequest.h
+  moc include\httpserver\staticfilecontroller.h
+  moc include\httpserver\httpsessionstore.h
+  moc include\httpserver\httprequesthandler.h
+  moc include\httpserver\httplistener.h
+  commTools.cpp
+  main.cpp
+  getdepartcontroller.cpp
+  HistoryDepartData.cpp
+  HistoryDepartDetailData.cpp
+d:\solution\ghndpms\ghndpms\src\controller\historydepartdata.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  httpcallBackController.cpp
+  RealtimeDepartData.cpp
+d:\solution\ghndpms\ghndpms\src\controller\httpcallbackcontroller.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  RealTimeDepartDetailData.cpp
+  RealtimePrsNumberController.cpp
+  requestmapper.cpp
+d:\solution\ghndpms\ghndpms\src\controller\realtimedepartdata.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  setcontroller.cpp
+  DataStore.cpp
+  hikdatarequest.cpp
+  systemconfig.cpp
+d:\solution\ghndpms\ghndpms\src\controller\requestmapper.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  timercontracller.cpp
+d:\solution\ghndpms\ghndpms\src\datadeal\datastore.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+d:\solution\ghndpms\ghndpms\src\datadeal\hikdatarequest.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  httpconnectionhandler.cpp
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 commTools.cpp)
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 src\controller\getdepartcontroller.cpp)
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 src\datadeal\timercontracller.cpp)
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 src\controller\HistoryDepartData.cpp)
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 src\controller\HistoryDepartDetailData.cpp)
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 src\controller\RealtimePrsNumberController.cpp)
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 src\controller\RealtimeDepartData.cpp)
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 src\datadeal\hikdatarequest.cpp)
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 src\controller\setcontroller.cpp)
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 src\controller\RealTimeDepartDetailData.cpp)
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 src\controller\requestmapper.cpp)
+  httpconnectionhandlerpool.cpp
+  httpcookie.cpp
+  httpglobal.cpp
+  httplistener.cpp
+  httprequest.cpp
+  httprequesthandler.cpp
+  httpresponse.cpp
+  httpsession.cpp
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 main.cpp)
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 src\controller\httpcallBackController.cpp)
+  httpsessionstore.cpp
+  staticfilecontroller.cpp
+d:\solution\ghndpms\ghndpms\src\httpserver\staticfilecontroller.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  dualfilelogger.cpp
+  filelogger.cpp
+  logger.cpp
+  logmessage.cpp
+  template.cpp
+  templatecache.cpp
+  templateloader.cpp
+  moc_setcontroller.cpp
+  moc_requestmapper.cpp
+  moc_RealtimePrsNumberController.cpp
+  moc_RealTimeDepartDetailData.cpp
+  moc_RealtimeDepartData.cpp
+  moc_httpcallBackController.cpp
+  moc_HistoryDepartDetailData.cpp
+  moc_HistoryDepartData.cpp
+  moc_getdepartcontroller.cpp
+  moc_httpconnectionhandler.cpp
+  moc_httpconnectionhandlerpool.cpp
+  moc_templateloader.cpp
+  moc_templatecache.cpp
+  moc_logger.cpp
+  moc_filelogger.cpp
+  moc_dualfilelogger.cpp
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 Debug\\moc\include\controller\moc_setcontroller.cpp)
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 Debug\\moc\include\controller\moc_RealtimeDepartData.cpp)
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 Debug\\moc\include\controller\moc_RealtimePrsNumberController.cpp)
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 Debug\\moc\include\controller\moc_RealTimeDepartDetailData.cpp)
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 Debug\\moc\include\controller\moc_getdepartcontroller.cpp)
+  moc_timercontracller.cpp
+  moc_hikdatarequest.cpp
+  moc_staticfilecontroller.cpp
+  moc_httpsessionstore.cpp
+  moc_httprequesthandler.cpp
+  moc_httplistener.cpp
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 Debug\\moc\include\datadeal\moc_timercontracller.cpp)
+d:\solution\ghndpms\ghndpms\include\datadeal\hikdatarequest.h(27): warning C4067: 预处理器指令后有意外标记 - 应输入换行符 (编译源文件 Debug\\moc\include\datadeal\moc_hikdatarequest.cpp)
+  GHNDPMS.vcxproj -> D:\Solution\GHNDPMS\Debug\GHNDPMS.exe
