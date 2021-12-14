@@ -8,7 +8,7 @@ ConnectionPool::ConnectionPool()
 {
 	hostName = "localhost";
 	dataBaseName = "GHNDDB";
-	userName = "ma";
+	userName = "M";
 	password = "";
 	databaseType = "QODBC";
 

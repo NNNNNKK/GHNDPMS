@@ -1,4 +1,4 @@
-﻿  Reading Qt configuration (D:\Qt\Qt5.12.2\5.12.2\msvc2017\\bin\qmake.exe)
+﻿  Reading Qt configuration (D:/Qt/Qt5.12.2/5.12.2/msvc2017/bin/qmake)
   moc HistoricalDataQuery.h
   moc DbOperationBase.h
   moc DbManageContexInterface.h
@@ -14,5 +14,5 @@
   moc_DbManageContexInterface.cpp
   moc_BasicDataManage.cpp
   moc_CommonTools.cpp
-    正在创建库 D:\Solution\GHNDPMS\Debug\DbManage.lib 和对象 D:\Solution\GHNDPMS\Debug\DbManage.exp
-  DbManage.vcxproj -> D:\Solution\GHNDPMS\Debug\DbManage.dll
+    正在创建库 D:\VsProjects\GHNDPMS\Debug\DbManage.lib 和对象 D:\VsProjects\GHNDPMS\Debug\DbManage.exp
+  DbManage.vcxproj -> D:\VsProjects\GHNDPMS\Debug\DbManage.dll

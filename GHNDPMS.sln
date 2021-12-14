@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DbManage", "DbManage\DbMana
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HttpUtillib", "HikHttpUtil\src\VS2015\HttpUtillib.vcxproj", "{A38AC541-BA75-4C8D-98DF-612F642F7910}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataRecovery", "DataRecovery\DataRecovery.vcxproj", "{4235928E-09BF-435D-A747-3139212A8A34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -37,6 +39,12 @@ Global
 		{A38AC541-BA75-4C8D-98DF-612F642F7910}.Release|x64.Build.0 = Release|x64
 		{A38AC541-BA75-4C8D-98DF-612F642F7910}.Release|x86.ActiveCfg = Release|Win32
 		{A38AC541-BA75-4C8D-98DF-612F642F7910}.Release|x86.Build.0 = Release|Win32
+		{4235928E-09BF-435D-A747-3139212A8A34}.Debug|x64.ActiveCfg = Debug|Win32
+		{4235928E-09BF-435D-A747-3139212A8A34}.Debug|x86.ActiveCfg = Debug|Win32
+		{4235928E-09BF-435D-A747-3139212A8A34}.Debug|x86.Build.0 = Debug|Win32
+		{4235928E-09BF-435D-A747-3139212A8A34}.Release|x64.ActiveCfg = Release|Win32
+		{4235928E-09BF-435D-A747-3139212A8A34}.Release|x86.ActiveCfg = Release|Win32
+		{4235928E-09BF-435D-A747-3139212A8A34}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
