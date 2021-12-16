@@ -24,7 +24,6 @@ void HistoryDepartData::service(HttpRequest &request, HttpResponse &response)
     QJsonArray mainArray;
     int  count=0;
 	QJsonObject orgObj = DataStore::getOrgnizeDataCache();//打开json文档
-	qDebug() << orgObj;
 	QJsonArray selectOrg;//筛选与需要的一样的
 	for (auto var : orgObj)
 	{ 

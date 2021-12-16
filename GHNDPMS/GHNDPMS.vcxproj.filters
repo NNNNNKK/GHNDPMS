@@ -218,6 +218,9 @@
     <QtMoc Include="include\templateengine\templateloader.h">
       <Filter>Header Files\templateengine</Filter>
     </QtMoc>
+    <QtMoc Include="include\DbManageContexInterface.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\httpserver\httpcookie.h">
@@ -258,9 +261,6 @@
     </ClInclude>
     <ClInclude Include="commTools.h">
       <Filter>Header Files\datadeal</Filter>
-    </ClInclude>
-    <ClInclude Include="include\DbManageContexInterface.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\StructureData.h">
       <Filter>Header Files</Filter>

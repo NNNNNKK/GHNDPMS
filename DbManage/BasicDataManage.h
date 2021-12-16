@@ -10,7 +10,8 @@
 #include <qjsonobject.h>
 #include "DbOperationBase.h"
 #include <string>
-#include <memory>
+#include <vector>
+#include <functional>
 
 //读取数据结构体
 struct GHND_ReadData;
@@ -24,15 +25,21 @@ public:
 	explicit BasicDataManage();
 	~BasicDataManage() {};
 	
-	virtual void readDataBase(GHND_ReadData * const plReadDataPtr);
+	virtual void readDataBase(std::shared_ptr<GHND_ReadData> sp) override;
 	virtual bool writeDataBase(const QVariant & var) override;
-
 	//写部门数据
 	bool writeOrganization();
 	//查询部门信息
-	std::map<std::string, Organization> * queryOrg();
+	void queryOrg(std::shared_ptr<GHND_ReadData> sp);
 	//查询所有的员工数目
-	const std::map<std::string,std::list<std::shared_ptr<Employee>>>  queryAllEmployees();
+	void queryAllEmployees(std::shared_ptr<GHND_ReadData> sp);
 	//查询所有部门编号
-	const std::list<std::string>  queryAllOrgIndexCode();
+	void queryAllOrgIndexCode(std::shared_ptr<GHND_ReadData> &sp);
+private:
+	using SelectFunction = std::function<void(std::shared_ptr<GHND_ReadData>)>;//查询函数
+	using SelectPair=std::map<int, SelectFunction>;//根据相关的整数值，执行相关的函数
+	SelectPair sSp;//查询对
+protected:
+	//初始化查询函数容器
+	void initSelectFunc();
 };

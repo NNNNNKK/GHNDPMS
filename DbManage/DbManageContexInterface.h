@@ -17,7 +17,7 @@ public:
 	~DbManageContexInterface();
 
 	//返回读取的数据类型
-	void getReadDbData(GHND_ReadData * const pRd);
+	void getReadDbData(std::shared_ptr<GHND_ReadData> sp);
 private:
 	DbOperationBase * dbBase;
 };

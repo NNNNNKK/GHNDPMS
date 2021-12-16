@@ -1,4 +1,5 @@
-*.obj
+# Build results
+/Debug/*.obj
 *.log
 *.pdb
 *.tlog

@@ -29,7 +29,9 @@ DbManageContexInterface::~DbManageContexInterface()
 	}
 }
 
-void DbManageContexInterface::getReadDbData(GHND_ReadData * const pRd)
+//返回从数据库中读取的数据
+void DbManageContexInterface::getReadDbData(std::shared_ptr<GHND_ReadData> sp)
 {
-	return dbBase->readDataBase(pRd);
+	return dbBase->readDataBase(sp);
 }
+

@@ -3,45 +3,35 @@
 #include "StructureData.h"
 #include <algorithm>
 #include <map>
-using namespace std;
+
 BasicDataManage::BasicDataManage()
 {
-
+	initSelectFunc();
 }
 
-void BasicDataManage::readDataBase(GHND_ReadData *  const plReadDataPtr)
+//初始化查询函数map
+void BasicDataManage::initSelectFunc()
 {
-	if (plReadDataPtr)
+	sSp[READ_ALLORG] = std::bind(&BasicDataManage::queryOrg, 
+		this,std::placeholders::_1);
+	sSp[READ_ALLORGEMPLOYEES] = std::bind(&BasicDataManage::queryAllEmployees,
+		this, std::placeholders::_1); 
+	sSp[READ_AllORGINDEXCODE] = std::bind(&BasicDataManage::queryAllOrgIndexCode,
+		this, std::placeholders::_1);
+}
+
+//读取数据
+void BasicDataManage::readDataBase(std::shared_ptr<GHND_ReadData> sp)
+{
+	if (!sp || READ_NOTHING==sp->nReadOpState)
 	{
-		switch (plReadDataPtr->nReadOpState)
-		{
-			case READ_ALLORG:
-			{
-				if (nullptr == plReadDataPtr->plDataPtr)
-				{
-					plReadDataPtr->nResult = READ_DATA_PTR_NULL;
-					return;
-				}
-				plReadDataPtr->plDataPtr = reinterpret_cast<long*>(queryOrg());
-				plReadDataPtr->nResult = READ_OK;
-				break;
-			}
-			case READ_AllORGINDEXCODE://读取所有部门的唯一标识码
-			{
-				if (nullptr == plReadDataPtr->plDataPtr)
-				{
-					plReadDataPtr->nResult = READ_DATA_PTR_NULL;
-					return;
-				}
-				auto allOrgCode = queryAllOrgIndexCode();
-				auto temp = reinterpret_cast<std::list<std::string> *>(plReadDataPtr->plDataPtr);
-				temp->resize(allOrgCode.size());//将容器的大小设置为返回后的数据的大小
-				std::copy(allOrgCode.cbegin(), allOrgCode.cend(), temp->begin());//数据拷贝
-				break;
-			}
-			default:
-				break;
-		}
+		return;
+	}
+	auto res = sSp.find(sp->nReadOpState);
+	if (res != sSp.end())
+	{
+		SelectFunction f = res->second;
+		f(sp);
 	}
 }
 
@@ -50,123 +40,166 @@ bool BasicDataManage::writeDataBase(const QVariant & var)
 	return false;
 }
 
+
 bool BasicDataManage::writeOrganization()
 {
 
 	return false;
 }
 
-std::map<std::string, Organization> * BasicDataManage::queryOrg()
+void BasicDataManage::queryOrg(std::shared_ptr<GHND_ReadData> sp)
 {
-	auto db = ConnectionPool::openConnection();//获取数据库连接
-	std::map<std::string, Organization> *allRobj =new std::map<std::string, Organization>();//返回的部门json对象
+	if (!sp || READ_ALLORG != sp->nReadOpState)
+	{
+		return;
+	}
+
+	auto db = ConnectionPool::openConnection();
 	try
 	{
+		//1 查询所有的员工信息
+		std::shared_ptr<GHND_ReadData> spCode(new GHND_ReadData(READ_ALLORGEMPLOYEES));
+		queryAllEmployees(spCode);
+		//查询状态判断及其处理
+		if (!spCode->plDataPtr || READ_OK != spCode->nResult)
+		{
+			ConnectionPool::closeConnection(db);
+			return;
+		}
+		auto allEmployees = spCode->plDataPtr->toJsonObject();//每个部门的所有的员工 
+		//2 查询部门信息
+		QJsonObject pObj;//父节点
 		QSqlQuery query(db);
-		auto allEmployees = queryAllEmployees();//查询每个部门的所有的员工 
 		query.prepare(QString::fromLocal8Bit("select * FROM [GHNDDB].[dbo].[Department]"));
 		if (query.exec())
 		{
 			qDebug("queryOrg success!");
 			while (query.next())
 			{
-				std::string orgIndex = query.value("orgIndexCode").toString().toStdString();
-				Organization orgObj;
-				orgObj.isModify = query.value("isModify").toBool();
-				orgObj.islocal = query.value("islocal").toBool();
-				orgObj.islocal = query.value("islocal").toBool();
-				orgObj.orgEmployeesNumber = query.value("orgEmployeesNumber").toInt();
-				orgObj.orgName = query.value("orgName").toString().toStdString();
-				orgObj.employeelist = allEmployees["allEmployees"];//员工链表
-
-				allRobj->emplace(orgIndex, std::move(orgObj));
+				QString orgIndex = query.value("orgIndexCode").toString();
+				QJsonObject subObj
+				{
+					{"employeelist",allEmployees[orgIndex]},
+					{"isModify",query.value("isModify").toBool()},
+					{"islocal",query.value("islocal").toBool()},
+					{"orgEmployeesNumber",query.value("orgEmployeesNumber").toInt()},
+					{"orgName",query.value("orgName").toString()},
+				};
+				pObj[orgIndex] = subObj;
 			}
 		}
+		//3.结果集返回
+		sp->plDataPtr = std::make_shared<QVariant>(pObj);
+		sp->nResult = READ_OK;
+		//4.资源释放
 		ConnectionPool::closeConnection(db);
-		return std::move(allRobj);
 	}
 	catch (...)
 	{
+		sp->nResult = FUNCTION_EXCEPTION;
 		ConnectionPool::closeConnection(db);
-		return std::move(allRobj);
 	}
 }
 
 //查询指定部分的员工
-const std::map<std::string, std::list<std::shared_ptr<Employee>>>  BasicDataManage::queryAllEmployees()
+void BasicDataManage::queryAllEmployees(std::shared_ptr<GHND_ReadData> sp)
 {
+	if (!sp|| READ_ALLORGEMPLOYEES != sp->nReadOpState)
+	{
+		return;
+	}
+
 	auto db = ConnectionPool::openConnection();//获取数据库连接
-	std::map<std::string, std::list<std::shared_ptr<Employee>>> employees;//所有的员工数目
 	try
 	{
 		QSqlQuery query(db);
-		// step 1. get all orgIndexCode
-		auto allOrgIndexCode = queryAllOrgIndexCode();
-		//step 2. query every org employee
-		for (auto it = allOrgIndexCode.cbegin();it!= allOrgIndexCode.cend();++it)
+		//步骤1 获取所有的部门标识符
+		std::shared_ptr<GHND_ReadData> spCode(new GHND_ReadData(READ_AllORGINDEXCODE));
+		queryAllOrgIndexCode(spCode);
+		//查询出错，返回
+		if (!spCode->plDataPtr||READ_OK != spCode->nResult)
 		{
-			const QString str = QString::fromStdString(*it);//解析部门编码
-
+			ConnectionPool::closeConnection(db);
+			return;
+		}
+		auto allOrgIndexCode = spCode->plDataPtr->toJsonArray();//获取所有的员工信息
+		QJsonObject allOrgEms;//所有的员工数
+		//步骤2 查询每个部门的员工信息
+		for (auto it = allOrgIndexCode.constBegin();it!= allOrgIndexCode.constEnd();++it)
+		{
+			const QString str = (*it).toString();//解析部门编码
+			
 			QString sqlStr = tr(" select * from [GHNDDB].[dbo].[Employee] where orgIndexCode = '%1'").arg(str);
 			query.prepare(sqlStr);
 			if (query.exec())
 			{
-				std::list<std::shared_ptr<Employee>> curOrgEmployee;//当前部门的人员列表
+				QJsonArray singleOrgEm;//单个部门的员工列表
 				while (query.next())
 				{
 					qDebug("queryAllEmployees success!");
-					std::shared_ptr<Employee> employee(new Employee);
-					std::string personId = query.value("personId").toString().toStdString();
-					employee->certificateNo = query.value("certificateNo").toString().toStdString();
-					employee->certificateType = query.value("certificateType").toInt();
-					employee->gender = query.value("gender").toInt();
-					employee->jobNo = query.value("jobNo").toString().toStdString();
-					employee->orgIndexCode = query.value("orgIndexCode").toString().toStdString();
-					employee->orgName = query.value("orgName").toString().toStdString();
-					employee->personName = query.value("personName").toString().toStdString();
-					employee->phoneNo = query.value("phoneNo").toString().toStdString();
-					employee->pinyin = query.value("pinyin").toString().toStdString();
-					employee->personId = personId;
-
-					curOrgEmployee.emplace_back(employee);
+					QJsonObject em
+					{
+						{"personId" ,query.value("personId").toString()},
+						{"certificateNo",query.value("certificateNo").toString()},
+						{"certificateType", query.value("certificateType").toInt()},
+						{"gender", query.value("gender").toInt()},
+						{"jobNo",  query.value("jobNo").toString()},
+						{"orgIndexCode",  query.value("orgIndexCode").toString()},
+						{"orgName",query.value("orgName").toString()},
+						{"personName", query.value("personName").toString()},
+						{"phoneNo", query.value("phoneNo").toString()},
+						{"pinyin",  query.value("pinyin").toString()}
+					};
+					singleOrgEm.push_back(em);
 				}
-				employees.emplace(*it, curOrgEmployee);
+				allOrgEms[str] = singleOrgEm;
 			}
 		};
-		ConnectionPool::closeConnection(db);//关闭连接
-		return std::move(employees);
+		//结果集返回
+		sp->plDataPtr = std::make_shared<QVariant>(allOrgEms);
+		sp->nResult = READ_OK;
+		//释放资源
+		ConnectionPool::closeConnection(db);
 	}
 	catch (...)
 	{
 		//出现异常释放资源
-		ConnectionPool::closeConnection(db);//关闭连接
-		return std::move(employees);
+		ConnectionPool::closeConnection(db);
+		sp->nResult = FUNCTION_EXCEPTION;
 	}
 }
 
 //查询所有的部门编码
-const std::list<std::string>  BasicDataManage::queryAllOrgIndexCode()
+void  BasicDataManage::queryAllOrgIndexCode(std::shared_ptr<GHND_ReadData> & sp)
 {
+	if (!sp || READ_AllORGINDEXCODE != sp->nReadOpState)
+	{
+		return;
+	}
 	auto db = ConnectionPool::openConnection();//获取数据库连接
-	std::list<std::string> allOrgIndexCode;
 	try
 	{
 		QSqlQuery query(db);
+		QJsonArray allIndexCodes;
 		query.prepare("SELECT orgIndexCode from [GHNDDB].[dbo].[Employee] group by orgIndexCode");
 		if (query.exec())
 		{
 			while (query.next())
 			{
-				allOrgIndexCode.emplace_back(query.value("orgIndexCode").toString().toStdString());
+				allIndexCodes.push_back(query.value("orgIndexCode").toString());
 			}
 		}
+		//将结果集返回
+		sp->plDataPtr = std::make_shared<QVariant>(allIndexCodes);
+		sp->nResult = READ_OK;
 		//释放资源
 		ConnectionPool::closeConnection(db);
-		return std::move(allOrgIndexCode);
 	}
 	catch (...)
 	{
+		//异常资源释放
 		ConnectionPool::closeConnection(db);
-		return std::move(allOrgIndexCode);
+		sp->nResult = FUNCTION_EXCEPTION;
 	}
 }
+
