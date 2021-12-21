@@ -16,11 +16,8 @@ void HistoryDepartData::service(HttpRequest &request, HttpResponse &response)
 	int backislocal = request.getParameter("islocal").toInt();
 	QString date = request.getParameter("date");
 	QString cdate = request.getParameter("cdate");
-	QString sdate;
-	if (date == QString())
-		sdate = cdate;
-	else
-		sdate = date;
+
+	QString sdate = date.isEmpty() ? cdate : date;
     QJsonArray mainArray;
     int  count=0;
 	QJsonObject orgObj = DataStore::getOrgnizeDataCache();//打开json文档
@@ -28,15 +25,15 @@ void HistoryDepartData::service(HttpRequest &request, HttpResponse &response)
 	for (auto var : orgObj)
 	{ 
 		QJsonObject son = var.toObject();
-		int islocalflag = son["islocal"].toBool();
-		if (true)
+		if (!son["islocal"].toBool())
 		{
            selectOrg.append(son);
 		}	
 	}
 	QJsonObject res;
 	int totalHours = HikdataRequest::contractHours(sdate);
-	for (int i = (page - 1)*limitnumber; i < (page*limitnumber< selectOrg.count()? page * limitnumber: selectOrg.count()); i ++)
+	for (int i = (page - 1)*limitnumber; i < (page*limitnumber< selectOrg.count()? 
+		page * limitnumber: selectOrg.count()); i ++)
 	{
           QJsonObject sub,varObj= selectOrg.at(i).toObject();
 		  sub["departId"] = varObj["orgIndexCode"];

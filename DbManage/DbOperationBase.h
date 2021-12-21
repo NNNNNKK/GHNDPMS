@@ -2,7 +2,9 @@
 #pragma once
 #include <QObject>
 #include <memory>
-struct GHND_ReadData;
+#include <QSqlDatabase>
+
+struct GHND_RWData;
 
 class DbOperationBase:public QObject
 {
@@ -10,8 +12,8 @@ class DbOperationBase:public QObject
 public:
 	DbOperationBase(){};
 	virtual ~DbOperationBase() {};
-	//读数据库操作
-	virtual void readDataBase(std::shared_ptr<GHND_ReadData> sp) = 0;
-	//写数据操作
-	virtual bool writeDataBase(const QVariant & var) = 0;
+	//数据库操作
+	virtual void OpDataBase(std::shared_ptr<GHND_RWData> sp) = 0;
+protected:
+	QSqlDatabase db;//数据库访问指针
 };

@@ -22,6 +22,7 @@ void HistoryDepartDetailData::service(HttpRequest &request, HttpResponse &respon
 	int limit = 1000;// request.getParameter("limit").toInt();
 	QString dept_id = request.getParameter("deptid");
 	QString date = request.getParameter("date");
+
 	QJsonDocument jsondoc;
 	if (requestType == tr("odetail"))
 	   jsondoc = backData(page, limit, dept_id, date);

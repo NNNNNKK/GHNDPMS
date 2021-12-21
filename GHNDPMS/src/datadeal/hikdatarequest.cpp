@@ -3,6 +3,9 @@
 #include"qtconcurrent"
 #include"GloableLocker.h"
 #include<qtextcodec.h>
+#include "DbManageContexInterface.h"
+#include "StructureData.h"
+
 Unit_query_t* HikdataRequest::hikQuery = nullptr;
 
 HikdataRequest::HikdataRequest(QString path, QObject *parent) :appPath(path)
@@ -91,57 +94,55 @@ HikdataRequest::~HikdataRequest()
 {
 	//delete hikQuery;
 }
-//获取所有部门列表
+
+//获取海康数据库中，除黑名单之外的所有部门列表
 QJsonArray HikdataRequest::getTotalOrg()
 {
+	//1.向海康数据库请求部门数据
 	string Interface_address = "/artemis/api/resource/v1/org/orgList";
 	QJsonObject requestobject;
-	QJsonArray orgArray;//要返回的部门列表数目
 	requestobject["pageNo"] = 1;
 	requestobject["pageSize"] = 1000;
 	QJsonObject responseJson = httpRequest(hikQuery, Interface_address, requestobject);
 
-	QString path = QCoreApplication::applicationDirPath();
-	QString filename = path + "/Data/Config/orgblacklist.data";
-	QJsonArray balckList = DataStore::openJsonDocument(filename)["black"].toArray();//获取父组织黑名单
+	//2.从本地数据库获取数据库中部门黑名单
+	std::shared_ptr<GHND_RWData> rd(new GHND_RWData(READ_ORGBLACK));
+	DbManageContexInterface(Basic).OpDbData(rd);
+	QJsonArray balckArray = rd->plDataPtr->toJsonArray();
+	//3.数据处理
+	QJsonArray orgArray;//要返回的部门列表数目
 	if (responseJson.contains("code") && responseJson.value("code").toInt() == 0)
 	{
-		QJsonObject dataObj = responseJson["data"].toObject();
-		QJsonArray pre_org = dataObj.value("list").toArray();
-		for (auto var : pre_org)
+		QJsonArray newOrgArray = responseJson["data"].toObject().value("list").toArray();
+		foreach (auto var,newOrgArray)
 		{
-			if (!balckList.contains(var.toObject()["parentOrgName"].toString()))
+			QString parentOrgName = var.toObject()["parentOrgName"].toString();
+			if (!balckArray.contains(parentOrgName))
+			{
 				orgArray.append(var.toObject());
+			}
 		}
 	}
-	else
-		qDebug("get source error:get orgList failed!");
 	return orgArray;
 }
 //写组织及其员工
 void  HikdataRequest::writeOrganization()
 {
 	qDebug("process depart Information.");
-	QJsonObject   oldOrglist = DataStore::getOrgnizeDataCache();//获取旧的部门信息
-	QStringList oldIndexCodes = oldOrglist.keys();//获取旧部门的唯一标识码
-	QStringList newIndexCodes;//新数据部门的位移标识码
-	QJsonArray orgArray = getTotalOrg();//获取isc中的所有的组织列表
-	// test coding---------------
-	//QJsonObject objTest;
-	//objTest.insert("orgIndexCode", "045dca16-8ab3-4572-93c1-e0bc0d3fbadf");
-	//objTest.insert("orgName", "中国安徽电建");
-	//orgArray.append(objTest);
-	//objTest.insert("orgIndexCode", "0d02e2ac-07f1-4ad3-bea6-8372aeaa2a72");
-	//objTest.insert("orgName", "西安理工大学");
-	//orgArray.append(objTest);
-	// test coding---------------
+	//1.获取海康数据库中部门信息
+	QStringList newIndexCodes;//新数据部门的唯一标识码
+	QJsonArray  orgArray = getTotalOrg();//获取isc中的所有的组织列表
+	//2.获取本地数据库中所有的部门编码
+	std::shared_ptr<GHND_RWData> sp(new GHND_RWData(READ_AllORGINDEXCODE));
+	DbManageContexInterface(Basic).OpDbData(sp);
+	auto allOldIndexCodes = sp->plDataPtr->toJsonArray();
 
 	for (int i = 0; i < orgArray.size(); i++)
 	{
-		QJsonObject getedOrg = orgArray.at(i).toObject();
-		getedOrg.remove("updateTime");
-		getedOrg.remove("parentOrgIndexCode");
-		QString orgIndexCode = getedOrg.value("orgIndexCode").toString();//组织唯一标识码
+		QJsonObject newOrgMsg = orgArray.at(i).toObject();
+		newOrgMsg.remove("updateTime");
+		newOrgMsg.remove("parentOrgIndexCode");
+		QString orgIndexCode = newOrgMsg.value("orgIndexCode").toString();//组织唯一标识码
 		newIndexCodes.append(orgIndexCode);
 		//获取每个组织下的人员信息
 		QJsonObject request;
@@ -149,49 +150,29 @@ void  HikdataRequest::writeOrganization()
 		request["pageNo"] = 1;
 		request["pageSize"] = 1000;
 		string api = "/artemis/api/resource/v2/person/orgIndexCode/personList";
-		//string api = "192.168.1.128:9999";
 		QJsonObject backData = httpRequest(hikQuery, api, request);
-		//backData.insert("code", "0");
 		//数据获取成功后执行的操作
 		if (backData.contains("code") && backData["code"].toInt() == 0)
 		{
-			QJsonArray employeelist;
-			QJsonArray backlist = backData["data"].toObject()["list"].toArray();
-			for (auto var : backlist)
-			{
-				if (var.isObject())
-				{
-					QJsonObject ob = var.toObject();
-					ob.remove("personPhoto");//删除个人照片信息
-					ob.remove("createTime");//删除创建的时间
-					ob.remove("updateTime");//删除更新时间
-					ob.remove("orgPath");
-					ob.remove("orgPathName");
-					ob["orgName"] = getedOrg["orgName"];//部门名字
-					employeelist.append(ob);
-				}
-			}
-			auto ite = oldOrglist.find(orgIndexCode);
-			if (ite == oldOrglist.end())//未找到该组织
-			{
-				getedOrg["orgEmployeesNumber"] = 50;
-				getedOrg["islocal"] = false;
-				getedOrg["isModify"] = false;
-				getedOrg["employeelist"] = employeelist;
-				oldOrglist[orgIndexCode] = getedOrg;
-				qDebug() << "failed to find exsting depart, we will create one";
-			}
-			else
-			{
-				//qDebug() << (*ite);
-				QJsonObject tempObj = (*ite).toObject();
-				tempObj["employeelist"] = employeelist;
-				tempObj["orgName"] = getedOrg["orgName"];
-				tempObj["orgPath"] = getedOrg["orgPath"];
-				tempObj["orgNo"] = getedOrg["orgNo"];
-				tempObj["parentOrgName"] = getedOrg["parentOrgName"];
-				*ite=tempObj;
-			}
+			QJsonArray semlist = backData["data"].toObject()["list"].toArray();//查询到的员工链表
+			//3.将部门数据写入到数据库中
+			QJsonArray worgArray;
+			newOrgMsg["orgEmployeesNumber"] = semlist.count();
+			newOrgMsg["islocal"] = false;
+			newOrgMsg["isModify"] = false;
+			worgArray.append(newOrgMsg);
+
+			std::shared_ptr<GHND_RWData> sp(new GHND_RWData(Basic));
+			std::shared_ptr<QVariant> spQ(new QVariant);
+			spQ->setValue(worgArray);
+			sp->plDataPtr = spQ;
+			sp->nReadOpState = WRITE_ORGMSG;
+			DbManageContexInterface(Basic).OpDbData(sp);
+
+			//4.将员工信息写入数据库中
+			spQ->setValue(semlist);
+			sp->nReadOpState = WRITE_EMPLOYEEMSG;
+			DbManageContexInterface(Basic).OpDbData(sp);
 			//DataStore::setOrgnizeData(oldOrglist);
 		}
 		else

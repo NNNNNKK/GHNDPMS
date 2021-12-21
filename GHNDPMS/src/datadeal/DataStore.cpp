@@ -213,9 +213,9 @@ QJsonObject DataStore::getOrgnizeDataCache()
 	QWriteLocker locker(&orgfilelocak);
 	if (orgDataCache.isEmpty()) 
 	{
-		std::shared_ptr<GHND_ReadData> sp(new GHND_ReadData(READ_ALLORG));
+		std::shared_ptr<GHND_RWData> sp(new GHND_RWData(READ_ALLORG));
 
-		DbManageContexInterface(Basic).getReadDbData(sp);
+		DbManageContexInterface(Basic).OpDbData(sp);
 		orgDataCache = sp->plDataPtr->toJsonObject();
 	}
 	return orgDataCache;

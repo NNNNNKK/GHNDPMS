@@ -30,8 +30,8 @@ DbManageContexInterface::~DbManageContexInterface()
 }
 
 //返回从数据库中读取的数据
-void DbManageContexInterface::getReadDbData(std::shared_ptr<GHND_ReadData> sp)
+void DbManageContexInterface::OpDbData(std::shared_ptr<GHND_RWData> sp)
 {
-	return dbBase->readDataBase(sp);
+	return dbBase->OpDataBase(sp);
 }
 
